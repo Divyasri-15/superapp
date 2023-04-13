@@ -1,0 +1,88 @@
+.form {
+    width: 37%;
+    box-sizing: border-box;
+    padding-left: 10%;
+}
+
+.form-header1, .form-header2{
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 2%;
+}
+
+.form-super{
+    font-family: 'Single Day';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    color: #72DB73;
+    margin: 0%;
+    margin-top: 6%;
+}
+
+.form-header2{
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-body input {
+    padding: 1.7vh 1.3vw;
+    margin-top: 2vh;
+    border: none;
+    background: #292929;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.form-body label{
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 14px;
+    margin-bottom: -2%;
+}
+
+.form-label{
+    color: #7C7C7C;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.form-ButtonActive {
+    margin-top: 3vh;
+    margin-bottom: 1.4vh;
+    background: #72DB73;
+    border-radius: 50px;
+    padding: 8px;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: 0.025em;
+}
+
+.form-note p{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 142%;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form-note span{
+    color:#72DB73;
+}

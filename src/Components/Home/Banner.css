@@ -1,0 +1,46 @@
+body{
+    overflow: hidden;
+}
+
+.Banner img{
+    width: 50vw;
+    height: 100vh;
+}
+
+.Banner_top{
+    display:flex;
+    flex-direction: row;
+    left: 3vw;
+    top: 4vh;
+    position: absolute;
+    gap: 3vw;
+    align-items: center;
+}
+
+.Banner_top p{
+    font-weight: 400;
+    font-size: 23px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+.Banner_top button{
+    background: #72DB73;
+    border-radius: 20px;
+    color: #FFFFFF;
+    border: none;
+    font-size: 14px;
+    padding: 9px 33px;
+    margin-top: 4px;
+}
+
+.Banner_bottom {
+    position: absolute;
+    left: 3vw;
+    bottom: 4vh;
+    font-size: 49px;
+    font-weight: 650;
+    letter-spacing: 0.02rem;
+    color: #FFFFFF;
+    width: 50vw;
+}
