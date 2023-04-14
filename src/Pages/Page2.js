@@ -1,6 +1,8 @@
+import Category from '../Components/Category/Category.js';
+
 function Page2() {
     return (
-      <h1>NEXT PAGE</h1>
+      <Category/>
     );
   }
   

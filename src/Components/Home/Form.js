@@ -36,7 +36,7 @@ function Form() {
             return;
         }
         window.localStorage.setItem("userData",JSON.stringify(FormData))
-        navigate('/next');
+        navigate('/category');
     };
 
     const handleChange = (e) => {

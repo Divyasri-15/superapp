@@ -1,0 +1,105 @@
+
+.Category-body{
+    background-color: #000000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.Category-left{
+    width: 30vw;
+    height: 80vh;
+    padding-top: 5vh;
+    padding-left: 8vw;
+}
+
+.Category-header1{
+    font-family: 'Single Day';
+    font-style: normal;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: #72DB73;
+}
+
+.Category-header2{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.7rem;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.Category {
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+}
+
+.Category-tag {
+    display: flex;
+    gap: 0.5vw;
+    text-align: center;
+    background: #148A08;
+    border:none;
+    border-radius: 30px;
+    font-size: 1.13rem;
+    font-style: normal;
+    font-weight: 300;
+    padding: 1.5% 4%;
+    color: #FFFFFF;
+    letter-spacing: 0.01em;
+    margin-bottom: 2.2vh;
+}
+
+.Category-tag span {
+    cursor: pointer;
+} 
+
+.Category-right{
+    width: 65vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 6vh;
+    padding-left: 8vh;
+}
+
+.Category-card{
+    width: auto;
+    height: auto;
+    margin-right: 2vw;
+    margin-bottom: 2vh;
+    border-radius: 10px;
+    padding: 0% 1%;
+}
+
+.Category-card p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-top: 0.8vh;
+    margin-left: 1vw;
+}
+
+.Category-submit{
+    font-style: normal;
+    position: absolute;
+    text-align: center;
+    background: #148A08;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    padding: 0.5% 1.5%;
+    color: #FFFFFF;
+    letter-spacing: 0.01em;
+    right: 9.5vw;
+    bottom: 5vh;
+}
+
+
