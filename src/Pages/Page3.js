@@ -1,6 +1,10 @@
+import Info from '../Components/Profile/Info.js';
+
 function Page3() {
     return (
-      <h1>NEXT PAGE</h1>
+      <div>
+        <Info/>
+      </div>
     );
   }
   

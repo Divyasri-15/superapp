@@ -77,7 +77,7 @@ function Category(){
             return;
         }
         window.localStorage.setItem("categories", JSON.stringify([...categories]))
-        navigate('/next')
+        navigate('/profile')
     }
 
     return(

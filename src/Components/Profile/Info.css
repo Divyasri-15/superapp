@@ -1,0 +1,47 @@
+body{
+    background:#1E1E1E;
+}
+
+.Info{
+    display: flex;
+    background: #5746EA;
+    border-radius: 33.428px;
+    height: 50vh;
+    width: 55vw;
+    margin-top: 4vh;
+    margin-left: 3vw;
+    padding: 2%;
+}
+
+.Info-userData{
+    margin-left: 3vw;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 70%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    width:auto;
+}
+.Info-category{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+}
+
+.Info-categoryTag{
+    display: flex;
+    gap: 1.3vw;
+    text-align: center;
+    background: #9F94FF;
+    border:none;
+    border-radius: 30px;
+    font-size: 1.13rem;
+    font-style: normal;
+    font-weight: 300;
+    padding: 1.5% 2.5%;
+    padding-left: 4%;
+    color: #FFFFFF;
+    letter-spacing: 0.01em;
+    margin-top: 2vh;
+}
