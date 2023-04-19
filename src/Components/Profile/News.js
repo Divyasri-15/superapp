@@ -1,62 +1,57 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
-const Weather = ()=>{
+function News()
+{
+    const [news, setNews] = useState("")
     const [date, setDate] = useState("")
     const [time, setTime] = useState("")
-    const [weather, setWeather] = useState(false)
-    // console.log(weather)
+
     useEffect(()=>{
-        const fetchWeather = async()=>{
-            await fetch("http://api.weatherapi.com/v1/current.json?key=987de39fe8924052ada80850232502&q=London&aqi=no")
-                .then(async(data)=>await data.json()).then((data)=>setWeather(data)) 
+        const fetchNews = async()=>{
+           await fetch("https://newsapi.org/v2/everything?q=tesla&from=2023-03-19&sortBy=publishedAt&apiKey=ac1de103681e465487b11f645c570992")
+                .then(async(data)=>await data.json()).then((res)=>setNews(res.articles[0]))
         }
-        fetchWeather()
+        fetchNews();
     },[])
+
     useEffect(()=>{
-        const date = new Date
+        const date = new Date();
         var hours = date.getHours();
         var minutes = date.getMinutes();
-        var ampm = hours >= 12 ? 'pm' : 'am';
+        var am_pm = hours >= 12 ? 'PM' : 'AM';
         hours = hours % 12;
         hours = hours ? hours : 12; // the hour '0' should be '12'
-        minutes = minutes < 10 ? '0'+minutes : minutes;
-        var strTime = hours + ':' + minutes + ' ' + ampm;
-        setTime(strTime)
-    })
+        minutes = (minutes < 10) ? '0'+minutes : minutes;
+        hours = (hours < 10) ? '0'+hours : hours;
+        var Time = hours + ':' + minutes + ' ' + am_pm;
+        setTime(Time);
+    },[])
+
     useEffect(()=>{
         const today = new Date();
         const yyyy = today.getFullYear();
         let mm = today.getMonth() + 1; // Months start at 0!
         let dd = today.getDate();
-
         if (dd < 10) dd = '0' + dd;
         if (mm < 10) mm = '0' + mm;
+        const TodayDate = dd + '-' + mm + '-' + yyyy;
+        setDate(TodayDate);
+    },[])
 
-        const formattedToday = dd + '-' + mm + '-' + yyyy;
-        setDate(formattedToday)
-    })
-    return (
-        <div style={{width:"30vw",minHeight:"20vh",background:'#101744',borderRadius:"12px", marginTop:"5px"}}>
-            <div style={{height:"7vh", background:"#FF4ADE", borderRadius:"12px", color:"white",display:"flex", justifyContent:"space-evenly", alignItems:"center", fontSize:"2rem"}}>
-                <span>{date}</span>
-                <span>{time}</span>
+    return(
+        <div style={{height:"90vh",width:"30vw", position:"relative", borderRadius:"19px",marginLeft:"2vw"}}>
+            <img src={news.urlToImage} style={{height:"55vh",width:"30vw", borderRadius:"19px 19px 0px 0px"}}/>
+            <div style={{ borderRadius:"0px 0px 19px 19px",background:"white",fontSize:"1.1rem",fontWeight:"400",fontStyle:"normal",padding:"4% 7%",textAlign:"justify",lineHeight:"150%"}}>
+                {news.description}
             </div>
-            <div>
-                {weather ?<div style={{display:"flex", color:"white", alignItems:"center", justifyContent:"space-evenly"}}> <div>
-                    <img src={weather.current.condition.icon} style={{width:"30px",height:"30px"}}/>
-                    <p>{weather.current.condition.text}</p>
-                </div>
-                <div>
-                   <p><span>{weather.current.temp_c}</span>&deg;C</p>
-                    <p>{weather.current.pressure_mb} pressure</p>
-                </div>
-                <div>
-                    <p >{weather.current.wind_kph} wind</p>
-                    <p>{weather.current.humidity} humidity</p>
-                </div></div>:<></>}
-              </div>
+            <div style={{position:"absolute",background:"rgba(0, 0, 0, 0.74)",top:"33vh",height:"22vh",boxSizing:"border-box",padding:"0% 5%"}}>
+                <p style={{color:"white",fontSize:"1.35rem",fontWeight:"500",marginBottom:"3%"}}>{news.title}</p>
+                <span style={{color:"white",fontSize:"1.1rem",fontWeight:"600"}}>{date}</span> &nbsp;
+                <span style={{height: "1vh",border: "0.001rem solid #FFFFFF"}}></span> &nbsp;
+                <span style={{color:"white",fontSize:"1.1rem",fontWeight:"600"}}>{time}</span>
+            </div>
         </div>
-    )
+    );
 }
 
-export default Weather
+export default News;
