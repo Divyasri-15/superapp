@@ -1,0 +1,36 @@
+.Weather{
+    /* height: 25vh; */
+    width: 36vw;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    background:#101744;
+    border-radius: 19px;
+}
+
+.Weather-date{
+    background: #FF4ADE;
+    display: flex;
+    justify-content: space-evenly;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 1.2%;
+    align-items: center;
+    color: #FFFFFF;
+    border-radius: 19px 19px 0px 0px;
+}
+
+.Weather-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    padding: 0% 8%;
+}
+
+.Weather-vl{
+    margin-top: -5%;
+    height: 6vh;
+    border: 0.001rem solid #FFFFFF;
+}
+

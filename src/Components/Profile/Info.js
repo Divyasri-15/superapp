@@ -6,11 +6,11 @@ function Info(){
     const categories = JSON.parse(window.localStorage.getItem("categories"));
     return(
         <div className="Info">
-            <img src={Profile} alt="profile"/>
+            <img className="Info-image" src={Profile} alt="profile"/>
             <div className="Info-userData">
                 <p>{info.name}</p>
-                <p>{info.email}</p>
-                <p style={{fontWeight:"500",fontSize:"3rem", lineHeight:"1%"}}>{info.username}</p>
+                <p style={{marginTop: "3vh"}}>{info.email}</p>
+                <p style={{fontWeight:"500",fontSize:"2rem", lineHeight:"1%"}}>{info.username}</p>
                 <div className="Info-category">                   {categories.map((category) => {
                             return (
                                 <button key="category" className="Info-categoryTag">
