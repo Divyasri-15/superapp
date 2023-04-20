@@ -2,6 +2,7 @@ import Info from '../Components/Profile/Info.js';
 import Weather from '../Components/Profile/Weather.js';
 import Notes from '../Components/Profile/Notes.js';
 import News from '../Components/Profile/News.js';
+import Timer from '../Components/Profile/Timer.js';
 
 function Page3() {
     return (
@@ -10,6 +11,7 @@ function Page3() {
           <div>
             <Info/> 
             <Weather/>
+            <Timer/>
           </div>
           <Notes/>
           <News/>

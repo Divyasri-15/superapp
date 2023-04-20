@@ -11,7 +11,7 @@ function Notes()
     };
 
     return(
-        <div style={{height:"62vh",width:"22vw", position:"relative", marginLeft:"2.5vw",borderRadius:"19px",background:"#F1C75B", padding:"0% 3%"}}>
+        <div style={{height:"54vh",width:"22vw", position:"relative", marginLeft:"2.5vw",borderRadius:"19px",background:"#F1C75B", padding:"0% 3%"}}>
             <p style={{color:"black",fontSize:"2rem",fontWeight:"600",marginBottom:"4%"}}>
                 All Notes
             </p>

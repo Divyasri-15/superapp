@@ -56,8 +56,8 @@ function Weather(){
                         </div>
                         <div className="Weather-vl"></div>
                         <div style={{marginLeft:"8%", marginRight:"-5%"}}>
-                            <p style={{fontSize:"2.3rem", fontWeight:"500" ,marginTop:"10%"}}><span>{weather.current.temp_c}</span>&deg;C</p>
-                            <p style={{display:"flex",gap:"6%", marginTop:"-15%"}}><img src={pressure}/>{weather.current.pressure_mb} mbar Pressure</p>
+                            <p style={{fontSize:"2.3rem", fontWeight:"500" ,marginTop:"2%"}}><span>{weather.current.temp_c}</span>&deg;C</p>
+                            <p style={{display:"flex",gap:"6%", marginTop:"-19%",fontSize:"1rem"}}><img src={pressure}/>{weather.current.pressure_mb} mbar Pressure</p>
                         </div>
                         <div className="Weather-vl"></div>
                         <div style={{marginLeft:"7%"}}>

@@ -1,0 +1,58 @@
+.Timer{
+    height: 30vh;
+    width: 65vw;
+    margin-left: 2vw;
+    background: #1E2343;
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5% 2%;
+    border-radius: 19px;
+    margin-top: 2.5vh;
+}
+
+.Timer-right{
+    color:#FFFFFF;
+    display:flex;
+    font-size:1.5rem;
+    justify-content:space-evenly;
+    margin-top: -6%;
+}
+
+.Timer-colon{
+    margin-top:12vh;
+    font-size: 2rem;
+}
+
+.Timer-heading{
+    text-align: center;
+    color: #949494;
+    font-size: 1.4rem;
+    margin-bottom: 11%;
+}
+
+.Timer-time{
+    margin-top: 0.5%;
+    margin-bottom: 4%;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+}
+
+.Timer-button{
+    background: #FF6A6A;
+    border-radius: 19px;
+    color: #FFFFFF;
+    width: 28vw;
+    border: none;
+    margin-top: 1.5vh;
+    padding: 1% 0%;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+

@@ -1,10 +1,10 @@
-body{
+/* body{
     overflow: hidden;
-}
+} */
 
 .Banner img{
     width: 50vw;
-    height: 100vh;
+    height: 99.5vh;
 }
 
 .Banner_top{
