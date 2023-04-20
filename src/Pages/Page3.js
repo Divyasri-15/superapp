@@ -5,12 +5,13 @@ import News from '../Components/Profile/News.js';
 
 function Page3() {
     return (
-      <div style={{  marginTop: "4vh"}}>
+      <div style={{marginTop: "4vh"}}>
         <div style={{display:"flex"}}>
           <div>
             <Info/> 
             <Weather/>
           </div>
+          <Notes/>
           <News/>
         </div>
       </div>
