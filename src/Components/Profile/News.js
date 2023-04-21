@@ -8,7 +8,7 @@ function News()
 
     useEffect(()=>{
         const fetchNews = async()=>{
-           await fetch("https://newsapi.org/v2/everything?q=tesla&from=2023-03-19&sortBy=publishedAt&apiKey=ac1de103681e465487b11f645c570992")
+           await fetch("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=ac1de103681e465487b11f645c570992")
                 .then(async(data)=>await data.json()).then((res)=>setNews(res.articles[0]))
         }
         fetchNews();
@@ -40,11 +40,11 @@ function News()
 
     return(
         <div style={{height:"90vh",width:"28vw", position:"relative", borderRadius:"19px",marginLeft:"3vw"}}>
-            <img src={news.urlToImage} style={{height:"55vh",width:"28vw", borderRadius:"19px 19px 0px 0px"}}/>
-            <div style={{ borderRadius:"0px 0px 19px 19px",background:"white",fontSize:"1.1rem",fontWeight:"400",fontStyle:"normal",padding:"4% 7%",textAlign:"justify",lineHeight:"150%"}}>
+            <img src={news.urlToImage} style={{height:"50vh",width:"28vw", borderRadius:"19px 19px 0px 0px"}}/>
+            <div style={{ height:"31.5vh",borderRadius:"0px 0px 19px 19px",background:"#FFFFFF",fontSize:"1.04em",fontWeight:"400",fontStyle:"normal",padding:"4% 7%",textAlign:"justify",lineHeight:"135%"}}>
                 {news.description}
             </div>
-            <div style={{position:"absolute",background:"rgba(0, 0, 0, 0.74)",top:"33vh",height:"22vh",boxSizing:"border-box",padding:"0% 5%"}}>
+            <div style={{position:"absolute",background:"rgba(0, 0, 0, 0.74)",top:"28vh",height:"22vh",boxSizing:"border-box",padding:"0% 5%"}}>
                 <p style={{color:"white",fontSize:"1.35rem",fontWeight:"500",marginBottom:"3%"}}>{news.title}</p>
                 <span style={{color:"white",fontSize:"1.1rem",fontWeight:"600"}}>{date}</span> &nbsp;
                 <span style={{height: "1vh",border: "0.001rem solid #FFFFFF"}}></span> &nbsp;

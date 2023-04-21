@@ -41,7 +41,7 @@ function Timer()
         if(hours==0){
             return
         }
-        setHours((hours)=>hours-1)
+        setHours((hr)=>hr-1)
     }
 
     const start="Start";
@@ -49,10 +49,10 @@ function Timer()
 
     function toHoursAndMinutes(totalSeconds) {
         const totalMinutes = Math.floor(totalSeconds / 60);
-        const seconds = totalSeconds % 60;
-        const hours = Math.floor(totalMinutes / 60);
-        const minutes = totalMinutes % 60;
-        return `${hours<10? '0'+hours : hours}:${minutes<10? '0'+minutes : minutes}:${seconds<10? '0'+seconds : seconds}`;
+        const sec = totalSeconds % 60;
+        const hr = Math.floor(totalMinutes / 60);
+        const min = totalMinutes % 60;
+        return `${hr<10? '0'+hr : hr}:${min<10? '0'+min : min}:${sec<10? '0'+sec : sec}`;
     }
     return (
         <div className="Timer">
