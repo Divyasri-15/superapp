@@ -26,8 +26,8 @@ function Movies({genre}){
     },[])
     return(
         <>
-            <p style={{ color:"white",fontSize:"1.7rem",marginLeft:"4vw",color:"#878787",marginBottom:"1.2%"}}>{genre}</p>
-            <div style={{display:"flex",marginLeft:"4vw",justifyContent:"space-between",width:"90vw"}}>
+            <p style={{ color:"white",fontSize:"1.7rem",marginLeft:"5vw",color:"#878787",marginBottom:"1.2%"}}>{genre}</p>
+            <div style={{display:"flex",marginLeft:"5vw",justifyContent:"space-between",width:"90vw"}}>
                 {movies.map((movie,idx)=>{
                     return (
                     <div key={idx} style={{width:"20vw"}}>
