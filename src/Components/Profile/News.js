@@ -39,7 +39,7 @@ function News()
     },[])
 
     return(
-        <div style={{height:"90vh",width:"28vw", position:"relative", borderRadius:"19px",marginLeft:"3vw"}}>
+        <div style={{height:"90vh",width:"28vw", position:"relative", borderRadius:"19px",marginLeft:"2.5vw"}}>
             <img src={news.urlToImage} style={{height:"50vh",width:"28vw", borderRadius:"19px 19px 0px 0px"}}/>
             <div style={{ height:"31.5vh",borderRadius:"0px 0px 19px 19px",background:"#FFFFFF",fontSize:"1.04em",fontWeight:"400",fontStyle:"normal",padding:"4% 7%",textAlign:"justify",lineHeight:"135%"}}>
                 {news.description}

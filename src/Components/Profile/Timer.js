@@ -2,6 +2,7 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import { useState } from 'react'
 import up from '../../Assets/up.png'
 import down from '../../Assets/down.png'
+import alarm from '../../Assets/alarm.mp3'
 import './Timer.css';
 
 function Timer()
@@ -11,33 +12,45 @@ function Timer()
     const [hours, setHours] = useState(0)
     const [playing, setPlaying] = useState(false)
     const increaseSecond = ()=>{
+        if(playing)
+            return
         if(seconds==59){
             return
         }
         setSeconds((sec)=>sec+1);
     }
     const increaseMinute = ()=>{
+        if(playing)
+            return
         if(minutes==59){
             return
         }
         setMinutes((min)=>min+1)
     }
     const increaseHour = ()=>{
+        if(playing)
+            return
         setHours((hours)=>hours+1)
     }
     const decreaseSecond = ()=>{
+        if(playing)
+            return
         if(seconds==0){
             return
         }
         setSeconds((sec)=>sec-1)
     }
     const decreaseMinute = ()=>{
+        if(playing)
+            return
         if(minutes==0){
             return
         }
         setMinutes((min)=>min-1)
     }
     const decreaseHour = ()=>{
+        if(playing)
+            return
         if(hours==0){
             return
         }
@@ -87,6 +100,9 @@ function Timer()
                 <button className="Timer-button" onClick={()=>{setPlaying((prev)=>!prev)}}>
                     {playing? pause : start}
                 </button>
+                <audio>
+                    <source src={alarm}/>
+                </audio>
             </div>
         </div>
     );
