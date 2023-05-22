@@ -5,7 +5,7 @@ function News()
     const [news, setNews] = useState("")
     const [date, setDate] = useState("")
     const [time, setTime] = useState("")
-
+    
     useEffect(()=>{
         const fetchNews = async()=>{
            await fetch("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=ac1de103681e465487b11f645c570992")
